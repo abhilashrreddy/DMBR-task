@@ -1,0 +1,169 @@
+<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet"><ul class="tilesWrap">
+    
+	<li [@slideInOut]>
+		<h2>Automotive</h2>
+      <img  src="assets/car.png">
+	</li>
+	<li [@slideInOut]>
+        <h2>Healthcare</h2>
+        <img  src="assets/heart.png">
+	</li>
+	<li [@slideInOut]>
+        <h2>Agriculture</h2>
+        <img  src="assets/agriculture.png">
+		
+	</li>
+	<li [@slideInOut]>
+        <h2>Food</h2>
+        <img src="assets/food.png">
+	</li>
+    <li [@slideInOut]>
+        <h2>FMCG</h2>
+        <img src="assets/gas.png">
+     
+	</li>
+</ul> -->
+
+<br />
+<div class="container-fluid">
+  <ngu-carousel
+    #myCarousel
+    [inputs]="carouselConfig"
+    [dataSource]="[first, second, third, fourth, fifth]"
+  >
+    <div *nguCarouselDef="let item" class="item">
+      <!-- <div class="tile"> -->
+      <ng-container *ngTemplateOutlet="item"></ng-container>
+      <!-- </div> -->
+    </div>
+
+    <ng-template #first>
+      <div class="counter">
+        <span class="counter-value"><img src="assets/car.png" /></span>
+        <h3>Automotive</h3>
+      </div>
+    </ng-template>
+
+    <ng-template #second>
+      <div class="counter">
+        <span class="counter-value"> <img src="assets/agriculture.png" /></span>
+        <h3>Agriculture</h3>
+      </div>
+    </ng-template>
+
+    <ng-template #third>
+      <div class="counter">
+        <span class="counter-value"><img src="assets/heart.png" /></span>
+        <h3>Healthcare</h3>
+      </div>
+    </ng-template>
+
+    <ng-template #fourth>
+      <div class="counter">
+        <span class="counter-value"><img src="assets/food.png" /></span>
+        <h3>Food</h3>
+      </div>
+    </ng-template>
+
+    <ng-template #fifth>
+      <div class="counter">
+        <span class="counter-value"><img src="assets/food.png" /></span>
+        <h3>Food</h3>
+      </div>
+    </ng-template>
+
+    <button
+      NguCarouselPrev
+      class="leftRs"
+      [style.opacity]="myCarousel.isFirst ? 0.5 : 1"
+    >
+      &lt;
+    </button>
+    <button
+      NguCarouselNext
+      class="rightRs"
+      [style.opacity]="myCarousel.isLast ? 0.5 : 1"
+    >
+      &gt;
+    </button>
+  </ngu-carousel>
+</div>
+<!-- <ngu-carousel
+  #myCarousel
+  [inputs]="carouselTile"
+  [dataSource]="carouselTileItems"
+>
+  <ngu-tile *nguCarouselDef="let item; let i = index">
+    <ngu-carousel
+      #myCarousel
+      [inputs]="carouselTile"
+      (carouselLoad)="carouselTileLoad(i)"
+      [dataSource]="carouselTiles[i]"
+    >
+      <button
+        NguCarouselPrev
+        class="leftRs"
+        [style.opacity]="myCarousel.isFirst ? 0.5 : 1"
+      >
+        &lt;
+      </button>
+      <button
+        NguCarouselNext
+        class="rightRs"
+        [style.opacity]="myCarousel.isLast ? 0.5 : 1"
+      >
+        &gt;
+      </button>
+      <ul class="myPoint" NguCarouselPoint>
+    
+      </ul>
+    </ngu-carousel>
+  </ngu-tile>
+  <button
+    NguCarouselPrev
+    class="leftRs"
+    [style.opacity]="myCarousel.isFirst ? 0.5 : 1"
+  >
+    &lt;
+  </button>
+  <button
+    NguCarouselNext
+    class="rightRs"
+    [style.opacity]="myCarousel.isLast ? 0.5 : 1"
+  >
+    &gt;
+  </button>
+  <ul class="myPoint" NguCarouselPoint>
+    
+  </ul>
+</ngu-carousel> -->
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-3 col-sm-6">
+      <div class="counter">
+        <span class="counter-value"><img src="assets/car.png" /></span>
+        <h3>Automotive</h3>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="counter">
+        <span class="counter-value"><img src="assets/heart.png" /></span>
+        <h3>Healthcare</h3>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="counter">
+        <span class="counter-value"> <img src="assets/agriculture.png" /></span>
+        <h3>Agriculture</h3>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="counter">
+        <span class="counter-value"><img src="assets/food.png" /></span>
+        <h3>Food</h3>
+      </div>
+    </div>
+
+  </div>
+</div> -->

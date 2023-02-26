@@ -1,0 +1,64 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* use viewport-relative units to cover page fully */
+body {
+  height: 100vh;
+  width: 100vw;
+}
+.banner {
+    background-color: #EBEBEB;
+    // color: #EADFDD;
+    width: 100%;
+    padding: 2em 0.5em;
+    height: 100%;
+  }
+  .row {
+    align-items: center;
+  }
+  h1 {
+    text-shadow: 1px 1px 2px #7c7c7c;
+  }
+//   .btn {
+    // padding: 0.5em 1.5em;
+    // border-radius: 2em;
+    // box-shadow: 5px 5px 5px rgba(105, 73, 73, 0.15);
+//   }
+  .btn-custom{
+    background-color:transparent;
+    color: black;
+    border-color:black;
+    border-radius:2em;
+    box-shadow: 5px 5px 5px rgba(105, 73, 73, 0.15);
+    // margin-left: 72%;
+  }
+  .btn-custom:hover{
+    background-color:black;
+    color: white;
+  }
+
+
+
+  @media screen and (max-width: 567px) {
+    .banner {
+      text-align: center;
+    }
+  }
+
+//  
+
+//   .carousel-indicators .btn-carousel{
+// // color: red;
+// // background-color: red; .btn-carousel{
+// //     background-image: url("https://www.databridgemarketresearch.com/assets/homeslider/coverage.jpg");
+// //     max-width: 100%;
+// //     background-repeat: no-repeat;
+// //     background-size: 100% 100%;
+// //     height: auto;
+// //   }
+// height: 50px;
+// width:50px;
+//   }
